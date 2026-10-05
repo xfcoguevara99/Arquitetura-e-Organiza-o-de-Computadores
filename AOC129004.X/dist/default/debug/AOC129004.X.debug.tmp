@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>/home/francisco/Documentos/Arquitetura-e-Organiza-o-de-Computadores/AOC129004.X</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>/opt/microchip/mplabx/v6.15/packs/Microchip/ATmega_DFP/3.0.158/avrasm/inc</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>AA_pilhas_subrotina.Asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>/opt/microchip/mplabx/v6.15/packs/Microchip/ATmega_DFP/3.0.158/avrasm/inc/m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>dist/default/debug/AOC129004.X.debug.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AA_pilhas_subrotina.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>dist/default/debug/AOC129004.X.debug.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INIT_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>1</LINE></INIT_32BITS>
+  <ZERA_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>31</LINE></ZERA_32BITS>
+  <LOOP><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>49</LINE></LOOP>
+ </LABELS>
+</ASSEMBLER_INFO>

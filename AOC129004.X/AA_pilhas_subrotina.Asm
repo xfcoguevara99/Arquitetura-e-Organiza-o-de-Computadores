@@ -1,0 +1,60 @@
+INIT_32BITS:
+  ;SALVANDO CONTEXTO
+  PUSH R16
+  PUSH R17
+  PUSH R18
+  PUSH R19
+  IN R20,SREG
+  PUSH R20
+  
+  LDI R16, 0X0
+  LDI R17, 0X1
+  LDI R18, 0XA
+  LDI R19, 0XF
+  
+  LDI XL, 0X00
+  LDI XH, 0X01
+
+  ST X+,R16
+  ST X+,R17
+  ST X+,R18
+  ST X,R19
+  
+  POP R20
+  OUT SREG,R20
+  POP R19
+  POP R18
+  POP R17
+  POP R16
+  
+  
+ZERA_32BITS:
+    ;SALVANDO CONTEXTO
+    PUSH R16
+    PUSH R17
+    PUSH R18
+    
+    ;VALOR DE INICIALIZAÇÃO
+    LDI R16, 0XA
+    
+    ;CONSTROLE DE LOOP
+    LDI R17,0
+    LDI R18,3
+    
+    ;DEFININDO ENDEREÇO
+    LDI XL, 0X00
+    LDI XH,0X01
+    
+    ;EXECUTANDO SUB ROTINA
+LOOP:
+    ST X+,R16
+    INC R17
+    CP R18,R17
+    BRGE LOOP
+    
+    RET
+    
+   
+    
+    
+    
