@@ -1,60 +1,127 @@
-INIT_32BITS:
-  ;SALVANDO CONTEXTO
-  PUSH R16
-  PUSH R17
-  PUSH R18
-  PUSH R19
-  IN R20,SREG
-  PUSH R20
-  
-  LDI R16, 0X0
-  LDI R17, 0X1
-  LDI R18, 0XA
-  LDI R19, 0XF
-  
-  LDI XL, 0X00
-  LDI XH, 0X01
+.DSEG
+.ORG SRAM_START
+    A: .BYTE 4
+    B: .BYTE 4
+    C: .BYTE 4
+    
+.CSEG
 
+START:
+    ;INICIALIZANDO UMA VARIAVEL
+    LDI XL, LOW(A)
+    LDI XH, HIGH(A)
+    
+    LDI R16, 0X0A
+    LDI R17, 0X0B
+    LDI R18, 0X0C
+    LDI R19, 0X0D
+    
+    RCALL INIT_32BITS
+    
+    ;ZERANDO VARIAVEL
+    LDI XL, LOW(A)
+    LDI XH, HIGH(A)
+    RCALL ZERA_32BITS
+    
+    
+    ;SUBSTRAINDO DUAS VARIAVEIS
+    LDI XL, LOW(A)
+    LDI XH, HIGH(A)
+    LDI R16, 0X0A
+    LDI R17, 0X0B
+    LDI R18, 0X0C
+    LDI R19, 0X0D 
+    RCALL INIT_32BITS
+    
+    LDI XL, LOW(B)
+    LDI XH, HIGH(B)
+    LDI R16, 0X00
+    LDI R17, 0X01
+    LDI R18, 0X02
+    LDI R19, 0X03
+    RCALL INIT_32BITS
+    
+    
+    LDI XL, LOW(A)
+    LDI XH, HIGH(A)
+    LDI YL, LOW(B)
+    LDI YH, HIGH(B)
+    LDI ZL, LOW(C)
+    LDI ZH, HIGH(C)
+    
+    RCALL SUB_32BITS
+    
+    
+    
+    RJMP START
+
+
+INIT_32BITS:
   ST X+,R16
   ST X+,R17
   ST X+,R18
   ST X,R19
-  
-  POP R20
-  OUT SREG,R20
-  POP R19
-  POP R18
-  POP R17
-  POP R16
-  
+  RET
   
 ZERA_32BITS:
     ;SALVANDO CONTEXTO
     PUSH R16
     PUSH R17
     PUSH R18
-    
-    ;VALOR DE INICIALIZAÇÃO
-    LDI R16, 0XA
-    
+    IN R18,SREG
+    PUSH R18
+
+    ;VALOR DE RESET
+    LDI R16, 0
+
     ;CONSTROLE DE LOOP
-    LDI R17,0
-    LDI R18,3
-    
-    ;DEFININDO ENDEREÇO
-    LDI XL, 0X00
-    LDI XH,0X01
-    
+    LDI R17,4
+
     ;EXECUTANDO SUB ROTINA
 LOOP:
     ST X+,R16
-    INC R17
-    CP R18,R17
-    BRGE LOOP
+    DEC R17
+    BRNE LOOP 
+    
+    POP R18
+    OUT SREG,R18
+    POP R18
+    POP R17
+    POP R16
+    RET
+   
+;SUB-ROTINA DE SUBSTRAÇÃO
+SUB_32BITS:
+    
+    ;SALVANDO CONTEXTO
+    PUSH R0
+    PUSH R1
+    PUSH R16
+    PUSH R17
+    IN R17,SREG
+    PUSH R17
+    
+    ;CONTROLE LOOP
+    LDI R16,4
+    
+    CLC
+LOOP_SUB:
+    LD R0,X+
+    LD R1,Y+
+    SBC R0,R1
+    ST Z+,R0
+    DEC R16
+    BRNE LOOP_SUB
+    
+    POP R17
+    OUT SREG,R17
+    POP R17
+    POP R16
+    POP R1
+    POP R0
     
     RET
-    
-   
+
     
     
     

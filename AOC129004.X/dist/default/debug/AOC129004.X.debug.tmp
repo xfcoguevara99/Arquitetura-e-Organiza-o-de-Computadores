@@ -20,8 +20,14 @@
   <FILE>dist/default/debug/AOC129004.X.debug.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <INIT_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>1</LINE></INIT_32BITS>
-  <ZERA_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>31</LINE></ZERA_32BITS>
-  <LOOP><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>49</LINE></LOOP>
+  <A><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>3</LINE></A>
+  <B><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>4</LINE></B>
+  <C><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>5</LINE></C>
+  <START><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>9</LINE></START>
+  <INIT_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>59</LINE></INIT_32BITS>
+  <ZERA_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>66</LINE></ZERA_32BITS>
+  <SUB_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>94</LINE></SUB_32BITS>
+  <LOOP><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>81</LINE></LOOP>
+  <LOOP_SUB><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>108</LINE></LOOP_SUB>
  </LABELS>
 </ASSEMBLER_INFO>
