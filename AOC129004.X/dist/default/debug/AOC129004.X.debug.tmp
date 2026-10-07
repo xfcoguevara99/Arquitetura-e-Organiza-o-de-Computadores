@@ -6,7 +6,7 @@
   <DIR>/opt/microchip/mplabx/v6.15/packs/Microchip/ATmega_DFP/3.0.158/avrasm/inc</DIR>
   <DIR></DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>AA_pilhas_subrotina.Asm</SOURCE_FILE>
+ <SOURCE_FILE>AVAL_2.Asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>/opt/microchip/mplabx/v6.15/packs/Microchip/ATmega_DFP/3.0.158/avrasm/inc/m328Pdef.inc</FILE>
  </INCLUDED_FILES>
@@ -14,20 +14,12 @@
   <FILE>dist/default/debug/AOC129004.X.debug.obj</FILE>
  </OBJECT_FILES>
  <HEX_FILES>
-  <FILE>AA_pilhas_subrotina.hex</FILE>
+  <FILE>AVAL_2.hex</FILE>
  </HEX_FILES>
  <OUTPUT_FILES>
   <FILE>dist/default/debug/AOC129004.X.debug.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <A><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>3</LINE></A>
-  <B><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>4</LINE></B>
-  <C><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>5</LINE></C>
-  <START><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>9</LINE></START>
-  <INIT_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>59</LINE></INIT_32BITS>
-  <ZERA_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>66</LINE></ZERA_32BITS>
-  <SUB_32BITS><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>94</LINE></SUB_32BITS>
-  <LOOP><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>81</LINE></LOOP>
-  <LOOP_SUB><FILE>AA_pilhas_subrotina.Asm</FILE><LINE>108</LINE></LOOP_SUB>
+  <start><FILE>AVAL_2.Asm</FILE><LINE>4</LINE></start>
  </LABELS>
 </ASSEMBLER_INFO>

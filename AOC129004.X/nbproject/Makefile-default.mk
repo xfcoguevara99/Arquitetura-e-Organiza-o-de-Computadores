@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=AA_pilhas_subrotina.Asm
+SOURCEFILES_QUOTED_IF_SPACED=AVAL_2.Asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AA_pilhas_subrotina.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/AA_pilhas_subrotina.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AVAL_2.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/AVAL_2.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/AA_pilhas_subrotina.o
+OBJECTFILES=${OBJECTDIR}/AVAL_2.o
 
 # Source Files
-SOURCEFILES=AA_pilhas_subrotina.Asm
+SOURCEFILES=AVAL_2.Asm
 
 # Pack Options 
 PACK_ASSEMBLER_OPTIONS=-I "${DFP_DIR}/avrasm/inc"  -i m328Pdef.inc
@@ -90,17 +90,17 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/AA_pilhas_subrotina.o: AA_pilhas_subrotina.Asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/AVAL_2.o: AVAL_2.Asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AA_pilhas_subrotina.o 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.tmp AA_pilhas_subrotina.Asm
+	@${RM} ${OBJECTDIR}/AVAL_2.o 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.tmp AVAL_2.Asm
 else
-${OBJECTDIR}/AA_pilhas_subrotina.o: AA_pilhas_subrotina.Asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/AVAL_2.o: AVAL_2.Asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AA_pilhas_subrotina.o 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.lss AA_pilhas_subrotina.Asm
+	@${RM} ${OBJECTDIR}/AVAL_2.o 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/AOC129004.X.${IMAGE_TYPE}.lss AVAL_2.Asm
 endif
 
 # ------------------------------------------------------------------------------------
